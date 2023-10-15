@@ -1,0 +1,24 @@
+package bt;
+import java.lang.reflect.Array;
+import java.util.*;
+public class bt5 {
+    public static void main(String[] args) {
+        String str = "trung tam nhu con cac";
+        String[] p = str.split(" ");
+        List<String> arr = new ArrayList<>();
+
+        Collections.addAll(arr, p);
+
+        int min = arr.get(0).length();
+        String minStr = arr.get(0);
+
+        for (String e: arr) {
+            if(min > e.length()) {
+                min = e.length();
+                minStr = e;
+            }
+        }
+
+        System.out.println("Ký tự có ít ký tự nhất là " + minStr.length() + " ký tự: " + minStr);
+    }
+}
